@@ -23,7 +23,7 @@ To enable feign client, _@EnableFeignClients_ annotation is added to main applic
 
 After enable feing client, an interface (_WorthCalculation.java_) is created in **_stocktransaction_** module which includes blueprints of services(invoked from **_stocktransaction_** module(_MarketTransactionService.java_) ) in **__companyworthcalculation__** module.
 
-Finally, to acquire a communication between two modules, the interface is injected in _MarketTransactionService.java_ and services are invoked in this class w/o creating rest template.
+Finally, to acquire a communication between two modules, the interface is injected in _MarketTransactionService.java_ and worth calculation services are invoked in this class w/o creating rest template.
 
 
 Feing client provides a very easy way to call RESTful services.
