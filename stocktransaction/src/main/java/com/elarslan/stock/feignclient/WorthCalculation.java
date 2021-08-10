@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.math.BigDecimal;
 
-@FeignClient(value = "companyworthcalculation", url = "http://localhost:8183/worthCalculation")
+@FeignClient(value = "${company.worth.calculation.module}", url = "${feign.worth.calculation.url}")
 public interface WorthCalculation {
     @PostMapping(value = "/sellShare")
     ResponseEntity<BigDecimal> sellShare(@RequestParam(value = "share") int numberOfShare, @RequestParam BigDecimal worth);
